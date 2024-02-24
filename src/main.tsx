@@ -1,11 +1,18 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import App from "@/App.tsx";
-import "./index.css";
+import { App } from '@/App';
+import './index.css';
+import { NotFound, RootErrorBoundary } from './page';
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
+const router = createBrowserRouter([
+  { path: '/', Component: App, errorElement: <RootErrorBoundary /> },
+  { path: '*', Component: NotFound },
+]);
+
+ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <RouterProvider router={router} />;
+  </React.StrictMode>,
 );
