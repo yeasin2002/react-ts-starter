@@ -24,8 +24,9 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "types": ["vite-plugin-pwa/info.d.ts", "vite-plugin-pwa/client.d.ts"]
   },
-  "include": ["src"],
+  "include": ["src", "global.d.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
