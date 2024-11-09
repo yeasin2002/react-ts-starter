@@ -25,4 +25,9 @@ dist-ssr
 
 
 
+dev-dist/**
+
 pnpm-lock.yaml
+bun.lockb
+yarn.lock
+package-lock.json
