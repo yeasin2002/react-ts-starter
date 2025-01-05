@@ -1,13 +1,21 @@
 import react from '@vitejs/plugin-react-swc';
 import path from 'path';
+import Fonts from 'unplugin-fonts/vite';
 import { defineConfig } from 'vite';
 import { VitePWA } from 'vite-plugin-pwa';
 import svgr from 'vite-plugin-svgr';
+
+import { fonts } from './configs/fonts.config';
 
 export default defineConfig({
   plugins: [
     react(),
     svgr(),
+    Fonts({
+      google: {
+        families: fonts,
+      },
+    }),
     VitePWA({
       registerType: 'autoUpdate',
       injectRegister: 'auto',
