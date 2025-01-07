@@ -2,11 +2,7 @@
   "compilerOptions": {
     "target": "ES2020",
     "useDefineForClassFields": true,
-    "lib": [
-      "ES2020",
-      "DOM",
-      "DOM.Iterable"
-    ],
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
     /* Bundler mode */
@@ -24,19 +20,10 @@
     //  Path Alias
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "./src/*"
-      ]
-    },
-    "types": [
-      "vite-plugin-pwa/info.d.ts",
-      "vite-plugin-pwa/client.d.ts"
-    ]
+      "@/*": ["./src/*"]
+    }
   },
-  "include": [
-    "src",
-    "global.d.ts"
-  ],
+  "include": ["src", "global.d.ts"],
   "references": [
     {
       "path": "./tsconfig.node.json"
