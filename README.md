@@ -14,6 +14,7 @@
 - standers folder structure
 - Custom import aliases (Example: @/components )
 - dependabot to keep notify to update dependencies
+- perfect workspace settings for single or team project.
 
 ## Vite Plugins That you must need to know for this starter.
 
