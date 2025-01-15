@@ -32,3 +32,5 @@ pnpm-lock.yaml
 bun.lockb
 yarn.lock
 package-lock.json
+
+auto-imports.d.ts

@@ -1,4 +1,5 @@
 import path from 'path';
+import AutoImport from 'unplugin-auto-import/vite';
 import { defineConfig } from 'vite';
 
 // vite plugins
@@ -17,6 +18,12 @@ export default defineConfig({
     Inspect(),
     compression(),
     Fonts({ google: { families: fonts } }),
+    AutoImport({
+      imports: ['react', 'react-router'],
+      dts: './auto-imports.d.ts',
+      eslintrc: { filepath: './eslint.config.js' },
+      dirs: ['./src/components/ui'], // no need to import shadcn ui components, Just use it as you want. add more if you want
+    }),
   ],
   resolve: {
     alias: {
