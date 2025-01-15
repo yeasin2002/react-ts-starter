@@ -11,8 +11,8 @@ export const Home = ({ ...rest }: Props) => {
       className="grid min-h-screen place-items-center bg-gray-900 text-white "
       {...rest}
     >
-      <div className="space-x-3">
-        <span>Count: {count}</span>
+      <div>
+        <span className="mx-3 text-2xl">Count: {count}</span>
         <Button variant={'secondary'} onClick={handleIncrement}>
           Increase
         </Button>

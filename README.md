@@ -13,8 +13,9 @@
 - eslint, prettier setup for code formatting
 - standers folder structure
 - Custom import aliases (Example: @/components )
+- dependabot to keep notify to update dependencies
 
-## Vite Plugins That you might need to know.
+## Vite Plugins That you must need to know for this starter.
 
 ### vite-plugin-svgr
 
@@ -23,18 +24,19 @@ Example:
 
 ```javascript
 import Logo from '@/assets/react.svg?react';
+// just add ?react query to get the svg component
 
 export const App = () => {
   return (
     <div {...props}>
       <Logo />
-      {/* You can use svg components in your React components */}
+      {/* You can use svg components as like normal React components */}
     </div>
   );
 };
 ```
 
-#### unplugin-fonts
+### unplugin-fonts
 
 This plugin is used to generate fonts from Google fonts. You can use this plugin in your project.
 
@@ -47,16 +49,23 @@ How to use ? Open `/config/fonts.config.ts` file and add your fonts like this: n
   },
 ```
 
-#### Run Developments Server
+### unplugin-auto-import/vite
 
-```bash
-npm run dev
-```
+This plugin is used to auto import modules. You can use this plugin in your project.
+auto-import will handle all imports like react, react-router and also shadcn-ui's component in your @component/ui folder , etc. and you can add more.
 
-#### Run Dockers
+Example:
 
-```bash
-docker compose up
+```javascript
+export function Counter() {
+  const [count, setCount] = useState(0); // no need to import react and react-router, auto-import will handle it
+  return (
+    <div>
+      <Button onClick={() => setCount(count + 1)}>Count: {count}</Button>
+      {/*  also,  Button from @/components/ui but you don't need to import it.  */}
+    </div>
+  );
+}
 ```
 
 #### Note: If you need SEO or Server Side Rendering you can use Next.js, Nuxtjs, Remix, Astro Etc SSR based framework. This template is just for vite-react.
