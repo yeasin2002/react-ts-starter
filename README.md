@@ -11,7 +11,7 @@
 - husky hooks setup for pre-commit
 - docker setup
 - eslint, prettier setup for code formatting
-- standers folder structure
+- standard folder structure
 - Custom import aliases (Example: @/components )
 - dependabot to keep notify to update dependencies
 - perfect workspace settings for single or team project.
