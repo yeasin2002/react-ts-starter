@@ -5,6 +5,8 @@ import { defineConfig } from 'vite';
 // vite plugins
 import react from '@vitejs/plugin-react-swc';
 import Fonts from 'unplugin-fonts/vite';
+// @ts-ignore
+import imagemin from 'unplugin-imagemin/vite';
 import { compression } from 'vite-plugin-compression2';
 import Inspect from 'vite-plugin-inspect';
 import svgr from 'vite-plugin-svgr';
@@ -17,12 +19,13 @@ export default defineConfig({
     react(),
     Inspect(),
     compression(),
+    imagemin(),
     Fonts({ google: { families: fonts } }),
     AutoImport({
       imports: ['react', 'react-router'],
       dts: './auto-imports.d.ts',
       eslintrc: { filepath: './eslint.config.js' },
-      dirs: ['./src/components/ui'], // no need to import shadcn ui components, Just use it as you want. add more if you want
+      dirs: ['./src/components/ui'],
     }),
   ],
   resolve: {
