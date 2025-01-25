@@ -3,6 +3,7 @@ import AutoImport from 'unplugin-auto-import/vite';
 import { defineConfig } from 'vite';
 
 // vite plugins
+import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react-swc';
 import Fonts from 'unplugin-fonts/vite';
 // @ts-ignore
@@ -20,6 +21,7 @@ export default defineConfig({
     Inspect(),
     compression(),
     imagemin(),
+    tailwindcss(),
     Fonts({ google: { families: fonts } }),
     AutoImport({
       imports: ['react', 'react-router'],
