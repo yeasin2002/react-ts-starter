@@ -24,9 +24,7 @@
     }
   },
   "include": ["src", "global.d.ts", "./auto-imports.d.ts"],
-  "references": [
-    {
-      "path": "./tsconfig.node.json"
-    }
-  ]
+  "exclude": ["node_modules", "dist"],
+
+  "references": [{ "path": "./tsconfig.node.json" }]
 }

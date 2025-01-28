@@ -34,3 +34,4 @@ yarn.lock
 package-lock.json
 
 auto-imports.d.ts
+.eslintrc-auto-import.json

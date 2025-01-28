@@ -8,6 +8,7 @@
     "vite.config.*": "jsconfig*, vite.config.*, cypress.config.*, playwright.config.*",
     " tailwind.config.*": "tailwind.config.*, postcss.config.*, components.json",
     "Dockerfile": "docker-compose.*, .dockerignore",
-    "package.json": "package-lock.json, pnpm*, .yarnrc*, yarn*, .eslint*, eslint*, .prettier*, prettier*, .editorconfig"
+    "vite.config.ts": "auto-imports.d.ts, .eslintrc-auto-import.json ",
+    "package.json": "package-lock.json, pnpm*, .yarnrc*, yarn*, eslint.config*, .prettier*, prettier*, .editorconfig"
   }
 }
