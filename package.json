@@ -19,7 +19,7 @@
     "clsx": "^2.1.1",
     "husky": "^9.1.7",
     "lint-staged": "^15.4.2",
-    "lucide-react": "^0.400.0",
+    "lucide-react": "^0.474.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router": "^7.1.3",
