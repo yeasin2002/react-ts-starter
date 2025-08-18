@@ -29,7 +29,7 @@
     "husky": "^9.1.7",
     "lint-staged": "^16.1.5",
     "@types/tailwindcss": "^3.1.0",
-    "@types/node": "^22.17.1",
+    "@types/node": "^24.3.0",
     "@types/react": "^19.1.10",
     "@types/react-dom": "^19.1.7",
     "@typescript-eslint/eslint-plugin": "^8.39.1",
