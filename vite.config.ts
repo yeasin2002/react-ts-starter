@@ -1,3 +1,4 @@
+import { nitro } from "nitro/vite";
 import path from "path";
 import AutoImport from "unplugin-auto-import/vite";
 import { defineConfig } from "vite";
@@ -16,6 +17,7 @@ import { fonts } from "./configs/fonts.config";
 
 export default defineConfig({
   plugins: [
+    nitro(),
     svgr(),
     react(),
     Inspect(),
@@ -36,6 +38,7 @@ export default defineConfig({
       // dirs: ['./src/components/ui'],
     }),
   ],
+  nitro: {},
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
