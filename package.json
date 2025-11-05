@@ -27,12 +27,10 @@
     "vite-plugin-svgr": "^4.5.0"
   },
   "devDependencies": {
-    "husky": "^9.1.7",
-    "lint-staged": "^16.2.4",
-    "@types/tailwindcss": "^3.1.0",
     "@types/node": "^24.7.2",
     "@types/react": "^19.2.2",
     "@types/react-dom": "^19.2.1",
+    "@types/tailwindcss": "^3.1.0",
     "@typescript-eslint/eslint-plugin": "^8.46.0",
     "@typescript-eslint/parser": "^8.46.0",
     "@vitejs/plugin-react-swc": "^4.1.0",
@@ -41,6 +39,8 @@
     "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^6.1.1",
     "eslint-plugin-react-refresh": "^0.4.23",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.4",
     "postcss": "^8.5.6",
     "prettier-plugin-organize-imports": "^4.3.0",
     "prettier-plugin-tailwindcss": "^0.6.14",
@@ -51,7 +51,6 @@
     "unplugin-fonts": "^1.4.0",
     "unplugin-imagemin": "^0.6.9",
     "vite": "^7.1.9",
-    "vite-plugin-compression2": "^2.2.1",
     "vite-plugin-inspect": "^11.3.3"
   }
 }
