@@ -13,7 +13,6 @@
         "react": "^19.2.0",
         "react-dom": "^19.2.0",
         "react-router": "^7.9.4",
-        "react-router-dom": "^7.9.5",
         "tailwind-merge": "^3.3.1",
         "tailwindcss-animate": "^1.0.7",
         "virtual": "^0.2.0",
@@ -1031,8 +1030,6 @@
     "react-is": ["react-is@16.13.1", "", {}, "sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ=="],
 
     "react-router": ["react-router@7.9.5", "", { "dependencies": { "cookie": "^1.0.1", "set-cookie-parser": "^2.6.0" }, "peerDependencies": { "react": ">=18", "react-dom": ">=18" }, "optionalPeers": ["react-dom"] }, "sha512-JmxqrnBZ6E9hWmf02jzNn9Jm3UqyeimyiwzD69NjxGySG6lIz/1LVPsoTCwN7NBX2XjCEa1LIX5EMz1j2b6u6A=="],
-
-    "react-router-dom": ["react-router-dom@7.9.5", "", { "dependencies": { "react-router": "7.9.5" }, "peerDependencies": { "react": ">=18", "react-dom": ">=18" } }, "sha512-mkEmq/K8tKN63Ae2M7Xgz3c9l9YNbY+NHH6NNeUmLA3kDkhKXRsNb/ZpxaEunvGo2/3YXdk5EJU3Hxp3ocaBPw=="],
 
     "readable-stream": ["readable-stream@1.0.34", "", { "dependencies": { "core-util-is": "~1.0.0", "inherits": "~2.0.1", "isarray": "0.0.1", "string_decoder": "~0.10.x" } }, "sha512-ok1qVCJuRkNmvebYikljxJA/UEsKwLl2nI1OmaqAu4/UE+h0wKCHok4XkL/gvi39OacXvw59RJUOFUkDib2rHg=="],
 
