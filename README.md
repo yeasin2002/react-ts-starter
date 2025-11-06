@@ -428,15 +428,29 @@ import type { User } from "@/types";
 
 ---
 
-## Docker Support
+## Deployment
+
+### Docker
 
 ```bash
-# Build image
+# Build and run with Docker
 docker build -t react-ts-starter .
-
-# Run container
 docker run -p 5000:5000 react-ts-starter
 ```
+
+### VPS Deployment with nginx
+
+For production deployment on a VPS with nginx, PM2, and SSL configuration, see the complete guide:
+
+📖 **[VPS Deployment Guide](./DEPLOYMENT.md)**
+
+The guide includes:
+
+- nginx configuration for serving static files and proxying API requests
+- PM2 or systemd setup for running the Nitro server
+- SSL certificate setup with Let's Encrypt
+- Monitoring and troubleshooting tips
+- Update and maintenance procedures
 
 ---
 
