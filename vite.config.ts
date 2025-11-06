@@ -1,3 +1,4 @@
+import { nitro } from "nitro/vite";
 import path from "path";
 import AutoImport from "unplugin-auto-import/vite";
 import { defineConfig } from "vite";
@@ -26,6 +27,7 @@ export default defineConfig({
       importMode: "sync",
     }),
     svgr(),
+    nitro(),
     Inspect(),
     // ViteImagemin() - commented out due to type issues, uncomment if needed
     tailwindcss(),

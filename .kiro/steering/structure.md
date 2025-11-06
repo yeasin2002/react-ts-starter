@@ -2,7 +2,8 @@
 
 ## Root Configuration
 
-- `vite.config.ts` - Vite configuration with plugins
+- `vite.config.ts` - Vite configuration with plugins (includes Nitro)
+- `server.ts` - Nitro server entry point
 - `tsconfig.json` - TypeScript compiler options with path aliases
 - `eslint.config.js` - ESLint flat config
 - `.prettierrc.json` - Prettier formatting rules
@@ -21,7 +22,7 @@ src/
 ├── data/           # Static data and mock data
 ├── helpers/        # Helper functions
 ├── hooks/          # Custom React hooks
-├── pages/          # Route components (file-based routing)
+├── pages/          # Frontend route components (file-based routing)
 ├── store/          # State management
 ├── types/          # TypeScript type definitions
 ├── utils/          # Utility functions
@@ -30,23 +31,65 @@ src/
 └── main.tsx        # Application entry point
 ```
 
+## Backend Directory (`routes/`)
+
+```
+routes/
+├── api/            # API endpoints
+│   ├── hello.ts    # Example: GET/POST /api/hello
+│   └── users/      # User-related endpoints
+│       ├── index.ts    # /api/users
+│       └── [id].ts     # /api/users/:id (dynamic)
+└── middleware/     # Server middleware (optional)
+```
+
 ## Import Conventions
+
+### Frontend
 
 - **Path Alias**: Use `@/` for imports from `src/` directory
   - Example: `import { Button } from '@/components/ui/button'`
 - **Auto-imports**: React hooks (useState, useEffect, etc.) and React Router hooks are auto-imported
 - **SVG Components**: Import SVGs with `?react` query
   - Example: `import Logo from '@/assets/logo.svg?react'`
+- **Routes**: Import from `~react-pages`
+  - Example: `import routes from '~react-pages'`
+
+### Backend
+
+- **H3 Utilities**: Import from `h3`
+  - Example: `import { readBody, getQuery } from 'h3'`
+- **Event Handlers**: Use `defineEventHandler` from H3
+  - Example: `export default defineEventHandler((event) => { ... })`
 
 ## Routing
+
+### Frontend Routes (Client-Side)
 
 - File-based routing powered by `vite-plugin-pages`
 - Route files located in `src/pages/`
 - Each `.tsx` file in `pages/` becomes a route automatically
+- **IMPORTANT**: All page components must use **default exports**
+- Dynamic routes: Use `[param].tsx` for dynamic segments
+  - Example: `src/pages/users/[id].tsx` → `/users/:id`
+- Catch-all routes: Use `[...all].tsx`
+  - Example: `src/pages/[...all].tsx` → `/*` (404 page)
 - Special files:
   - `index.tsx` - Root route (`/`)
-  - `NotFound.tsx` - 404 page
+  - `NotFound.tsx` or `[...all].tsx` - 404 page
   - `RootErrorBoundary.tsx` - Error boundary
+
+### Backend Routes (Server-Side)
+
+- File-based API routing powered by Nitro and H3
+- Route files located in `routes/`
+- Each `.ts` file becomes an API endpoint
+- Use `defineEventHandler` to create handlers
+- Dynamic routes: Use `[param].ts` for dynamic segments
+  - Example: `routes/api/users/[id].ts` → `/api/users/:id`
+- Method-specific handlers: Use `.get.ts`, `.post.ts`, etc.
+  - Example: `routes/api/users/index.get.ts` → `GET /api/users`
+  - Example: `routes/api/users/index.post.ts` → `POST /api/users`
 
 ## Component Organization
 
