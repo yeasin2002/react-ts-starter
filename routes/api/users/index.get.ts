@@ -1,4 +1,6 @@
-export default defineEventHandler(() => {
+import { defineHandler } from "nitro/h3";
+
+export default defineHandler(() => {
   return {
     users: [
       { id: 1, name: "John Doe", email: "john@example.com" },

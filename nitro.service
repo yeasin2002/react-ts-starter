@@ -1,0 +1,16 @@
+[Unit]
+Description=Nitro Server
+After=network.target
+
+[Service]
+Type=simple
+User=www-data
+WorkingDirectory=/var/www/your-app
+ExecStart=/usr/bin/node .output/server/index.mjs
+Restart=on-failure
+Environment=NODE_ENV=production
+Environment=NITRO_PORT=3000
+Environment=NITRO_HOST=127.0.0.1
+
+[Install]
+WantedBy=multi-user.target

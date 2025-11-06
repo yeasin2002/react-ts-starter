@@ -1,4 +1,6 @@
-export default defineEventHandler((event) => {
+import { defineHandler, getRouterParam } from "nitro/h3";
+
+export default defineHandler((event) => {
   const id = getRouterParam(event, "id");
 
   // Mock user data
@@ -10,10 +12,10 @@ export default defineEventHandler((event) => {
   const user = users[id as keyof typeof users];
 
   if (!user) {
-    throw createError({
+    return {
       statusCode: 404,
       statusMessage: "User not found",
-    });
+    };
   }
 
   return { user };

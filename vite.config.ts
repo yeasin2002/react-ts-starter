@@ -20,6 +20,7 @@ export default defineConfig({
   },
 
   plugins: [
+    nitro(),
     react(),
     Pages({
       dirs: "src/pages",
@@ -27,7 +28,7 @@ export default defineConfig({
       importMode: "sync",
     }),
     svgr(),
-    nitro(),
+
     Inspect(),
     // ViteImagemin() - commented out due to type issues, uncomment if needed
     tailwindcss(),
