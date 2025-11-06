@@ -96,6 +96,39 @@ Step-by-step guide:
 
 ---
 
+### [Building-SSR-Framework.md](./Building-SSR-Framework.md) 🏗️
+
+**How Nitro-based SSR frameworks work**
+
+Deep dive into architecture:
+
+- How TanStack Start and Nuxt achieve SSR with Nitro
+- Key components needed (dual build, server entry, client entry)
+- Architecture comparison with Next.js/Nuxt
+- Server functions and streaming
+- Complete implementation overview
+
+**Read this if:** You want to understand how SSR frameworks work under the hood.
+
+---
+
+### [Implementing-SSR-Step-by-Step.md](./Implementing-SSR-Step-by-Step.md) 🛠️
+
+**Hands-on guide to building SSR**
+
+Practical implementation:
+
+- Minimal SSR setup (Part 1)
+- Data fetching (Part 2)
+- Streaming SSR (Part 3)
+- Production build (Part 4)
+- Advanced features (Part 5)
+- Testing and deployment (Part 6)
+
+**Read this if:** You want to actually implement SSR in your current project.
+
+---
+
 ## 🚀 Quick Start
 
 ### Current Setup (CSR)
