@@ -2,7 +2,7 @@ import { Button } from "@/components";
 
 interface Props extends React.ComponentProps<"div"> {}
 
-export const Home = ({ ...rest }: Props) => {
+const Home = ({ ...rest }: Props) => {
   const [count, setCount] = useState(0); // no need to import react and react-router, auto-import will handle it
 
   const handleIncrement = () => {
@@ -25,3 +25,5 @@ export const Home = ({ ...rest }: Props) => {
     </div>
   );
 };
+
+export default Home;
