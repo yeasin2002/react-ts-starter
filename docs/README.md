@@ -129,6 +129,32 @@ Practical implementation:
 
 ---
 
+## 🏗️ Building Your Own Framework
+
+Want to build a full-stack React framework like Next.js, TanStack Start, or Nuxt?
+
+### [build-framework/](./build-framework/)
+
+Complete guide to building a production-ready React framework:
+
+- **[00-Quick-Start.md](./build-framework/00-Quick-Start.md)** - Get started in 30 minutes
+- **[README.md](./build-framework/README.md)** - Complete roadmap and overview
+- **[01-Architecture.md](./build-framework/01-Architecture.md)** - System architecture
+- **[02-Tech-Stack.md](./build-framework/02-Tech-Stack.md)** - All tools and packages
+
+**What you'll build:**
+
+- ✅ Server-Side Rendering (SSR)
+- ✅ File-based routing
+- ✅ Client/Server components
+- ✅ Server functions
+- ✅ Image optimization
+- ✅ Universal deployment
+
+**Read this if:** You want to build your own framework using Vite, Nitro, and Vinxi.
+
+---
+
 ## 🚀 Quick Start
 
 ### Current Setup (CSR)
