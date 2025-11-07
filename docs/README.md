@@ -155,6 +155,33 @@ Complete guide to building a production-ready React framework:
 
 ---
 
+## 📖 Step-by-Step Tutorial
+
+Want hands-on guidance with complete code examples?
+
+### [tutorial/](./tutorial/)
+
+Complete step-by-step tutorial with code:
+
+- **[README.md](./tutorial/README.md)** - Tutorial overview and structure
+- **[01-Turborepo-Setup.md](./tutorial/01-Turborepo-Setup.md)** - Initialize monorepo
+- **[02-Package-Structure.md](./tutorial/02-Package-Structure.md)** - Create all packages
+- **[03-Core-Package.md](./tutorial/03-Core-Package.md)** - Implement core framework
+- **More tutorials coming soon...**
+
+**What you'll build:**
+
+- ✅ Monorepo with Turborepo
+- ✅ Core framework package
+- ✅ Image optimization package
+- ✅ Link component package
+- ✅ CLI tool
+- ✅ Complete working framework
+
+**Read this if:** You want step-by-step instructions with complete code examples.
+
+---
+
 ## 🚀 Quick Start
 
 ### Current Setup (CSR)
