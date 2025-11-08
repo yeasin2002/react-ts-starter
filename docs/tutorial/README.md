@@ -1,375 +1,247 @@
-# ReactFlow Framework - Complete Tutorial
+# ReactFlow Framework Tutorial
 
-A step-by-step guide to building a production-ready full-stack React framework using Turborepo, Vite, Nitro, and Vinxi.
-
----
-
-## 📚 Tutorial Structure
-
-### Part 1: Project Setup
-
-1. **[01-Turborepo-Setup.md](./01-Turborepo-Setup.md)** - Initialize monorepo
-2. **[02-Package-Structure.md](./02-Package-Structure.md)** - Create package architecture
-3. **[03-Core-Package.md](./03-Core-Package.md)** - Build core framework package
-
-### Part 2: Build System
-
-4. **[04-Vinxi-Configuration.md](./04-Vinxi-Configuration.md)** - Configure Vinxi orchestrator
-5. **[05-Vite-Setup.md](./05-Vite-Setup.md)** - Set up Vite builds
-6. **[06-Nitro-Integration.md](./06-Nitro-Integration.md)** - Integrate Nitro server
-
-### Part 3: Core Features
-
-7. **[07-SSR-Implementation.md](./07-SSR-Implementation.md)** - Server-side rendering
-8. **[08-File-Based-Routing.md](./08-File-Based-Routing.md)** - Automatic routing
-9. **[09-Server-Functions.md](./09-Server-Functions.md)** - Type-safe RPC
-
-### Part 4: Component Packages
-
-10. **[10-Image-Package.md](./10-Image-Package.md)** - Image optimization package
-11. **[11-Link-Package.md](./11-Link-Package.md)** - Smart Link component
-12. **[12-Additional-Packages.md](./12-Additional-Packages.md)** - More utilities
-
-### Part 5: CLI & Testing
-
-13. **[13-CLI-Package.md](./13-CLI-Package.md)** - Framework CLI tool
-14. **[14-Testing-Setup.md](./14-Testing-Setup.md)** - Testing infrastructure
-15. **[15-Example-App.md](./15-Example-App.md)** - Build example application
+Complete guide to building a full-stack React framework with Vite, Vinxi, and Nitro.
 
 ---
 
-## 🏗️ Final Project Structure
+## 📚 Tutorial Overview
 
-```
-reactflow/
-├── packages/
-│   ├── core/                 # Core framework
-│   ├── image/                # Image optimization
-│   ├── link/                 # Link component
-│   ├── router/               # Routing system
-│   ├── server/               # Server utilities
-│   ├── cli/                  # CLI tool
-│   └── create-reactflow/     # Project scaffolder
-│
-├── apps/
-│   ├── docs/                 # Documentation site
-│   └── example/              # Example application
-│
-├── tooling/
-│   ├── eslint-config/        # Shared ESLint config
-│   ├── typescript-config/    # Shared TS config
-│   └── prettier-config/      # Shared Prettier config
-│
-├── turbo.json                # Turborepo config
-├── package.json              # Root package.json
-└── pnpm-workspace.yaml       # PNPM workspace config
-```
+This tutorial series will guide you through building a production-ready full-stack React framework from scratch. You'll learn how to integrate Vite, Vinxi, and Nitro to create a powerful development experience.
+
+---
+
+## 🎯 What You'll Build
+
+A complete full-stack framework with:
+
+- **Monorepo architecture** with Turborepo
+- **File-based routing** for both client and server
+- **Server functions** for type-safe RPC
+- **SSR & Streaming** for optimal performance
+- **CLI tool** for project scaffolding
+- **Production deployment** strategies
+
+---
+
+## 📖 Tutorial Chapters
+
+### Part 1: Foundation (Chapters 1-3)
+
+1. **[Turborepo Setup](./01-Turborepo-Setup.md)**
+   - Initialize monorepo
+   - Configure workspaces
+   - Set up tooling
+
+2. **[Package Structure](./02-Package-Structure.md)**
+   - Create package scaffolding
+   - Configure TypeScript
+   - Set up build system
+
+3. **[Core Package](./03-Core-Package.md)**
+   - Implement core framework
+   - Integrate Vite and Nitro
+   - Create build system
+
+### Part 2: Features (Chapters 4-6)
+
+4. **[Vinxi Configuration](./04-Vinxi-Configuration.md)**
+   - Deep dive into Vinxi
+   - Multi-router architecture
+   - Dev server & HMR
+
+5. **[File-Based Routing](./05-File-Based-Routing.md)**
+   - Route scanner
+   - Dynamic routes
+   - Virtual modules
+
+6. **[Server Functions](./06-Server-Functions.md)**
+   - Type-safe RPC
+   - React hooks
+   - Error handling
+
+### Part 3: Tooling (Chapters 7-8)
+
+7. **[CLI Tool](./07-CLI-Tool.md)**
+   - Command-line interface
+   - Project scaffolding
+   - Dev/build commands
+
+8. **[Example App](./08-Example-App.md)**
+   - Build complete blog app
+   - Data fetching
+   - Forms & mutations
+
+### Part 4: Production (Chapters 9-10)
+
+9. **[Deployment](./09-Deployment.md)**
+   - Docker containerization
+   - VPS deployment
+   - Cloud platforms
+
+10. **[Advanced Features](./10-Advanced-Features.md)**
+    - Middleware system
+    - Authentication
+    - Caching & optimization
 
 ---
 
 ## 🚀 Quick Start
 
-### Prerequisites
-
 ```bash
-# Required
-Node.js >= 20.x
-pnpm >= 8.x
+# Clone the tutorial repository
+git clone https://github.com/yourusername/reactflow-tutorial
 
-# Install pnpm if needed
-npm install -g pnpm
-```
-
-### Initialize Project (5 minutes)
-
-```bash
-# Create directory
-mkdir reactflow
-cd reactflow
-
-# Initialize Turborepo
-pnpm dlx create-turbo@latest
-
-# Follow prompts:
-# - Package manager: pnpm
-# - Include example apps: No
+# Follow along starting with Chapter 1
+cd reactflow-tutorial
 ```
 
 ---
 
-## 📦 Package Overview
+## 📋 Prerequisites
 
-### Core Packages
+Before starting, ensure you have:
 
-**@reactflow/core**
-
-- Framework core
-- Build system integration
-- Runtime utilities
-- Entry point generation
-
-**@reactflow/router**
-
-- File-based routing
-- Route generation
-- Route matching
-- Type generation
-
-**@reactflow/server**
-
-- Server utilities
-- Server functions
-- Middleware system
-- Context management
-
-### Component Packages
-
-**@reactflow/image**
-
-- Image component
-- Automatic optimization
-- Format conversion
-- Lazy loading
-
-**@reactflow/link**
-
-- Link component
-- Prefetching
-- Client-side navigation
-- Active state
-
-### Tooling Packages
-
-**@reactflow/cli**
-
-- Project scaffolding
-- Code generation
-- Build commands
-- Dev server
-
-**create-reactflow**
-
-- Project initializer
-- Template selection
-- Dependency installation
+- **Node.js** 20+ installed
+- **pnpm** 8+ installed
+- Basic knowledge of:
+  - React & TypeScript
+  - Node.js & npm
+  - Command line basics
+  - Git
 
 ---
 
-## 🎯 Learning Path
+## 🎓 Learning Path
 
-### Day 1: Setup (2-3 hours)
+### Beginner Path
 
-- [ ] Initialize Turborepo
-- [ ] Create package structure
-- [ ] Set up tooling configs
-- [ ] Install dependencies
+Start with chapters 1-3 to understand the foundation, then build the example app in chapter 8.
 
-### Day 2-3: Core (6-8 hours)
+### Intermediate Path
 
-- [ ] Build core package
-- [ ] Configure Vinxi
-- [ ] Set up Vite
-- [ ] Integrate Nitro
+Complete chapters 1-8 to build a fully functional framework with all core features.
 
-### Day 4-5: Features (8-10 hours)
+### Advanced Path
 
-- [ ] Implement SSR
-- [ ] Build routing system
-- [ ] Add server functions
-- [ ] Test everything
-
-### Day 6-7: Components (6-8 hours)
-
-- [ ] Create Image package
-- [ ] Create Link package
-- [ ] Add utilities
-- [ ] Write tests
-
-### Day 8-9: CLI (4-6 hours)
-
-- [ ] Build CLI tool
-- [ ] Add templates
-- [ ] Test scaffolding
-- [ ] Write docs
-
-### Day 10: Polish (2-4 hours)
-
-- [ ] Build example app
-- [ ] Write documentation
-- [ ] Test everything
-- [ ] Celebrate! 🎉
-
-**Total Time:** 28-41 hours (1-2 weeks part-time)
+Complete all 10 chapters to master advanced features and production deployment.
 
 ---
 
 ## 💡 Key Concepts
 
-### Monorepo with Turborepo
+### Vite
 
-**Why Turborepo?**
+Fast build tool and dev server with:
 
-- Fast builds with caching
-- Parallel task execution
-- Shared dependencies
-- Easy to manage
+- Lightning-fast HMR
+- Optimized production builds
+- Plugin ecosystem
 
-**Structure:**
+### Vinxi
+
+JavaScript SDK for full-stack apps:
+
+- Multi-router architecture
+- Unified dev experience
+- Framework-agnostic
+
+### Nitro
+
+Universal server framework:
+
+- File-based API routes
+- Multiple deployment targets
+- Built-in optimizations
+
+---
+
+## 🛠️ Tech Stack
+
+- **Frontend**: React 19, TypeScript, React Router
+- **Build**: Vite, Vinxi, tsup
+- **Server**: Nitro, H3
+- **Monorepo**: Turborepo, pnpm
+- **CLI**: Commander, Ora, Chalk
+
+---
+
+## 📦 Final Package Structure
 
 ```
-packages/     # Shared packages
-apps/         # Applications
-tooling/      # Shared configs
+reactflow/
+├── packages/
+│   ├── core/           # Framework core
+│   ├── router/         # Routing system
+│   ├── server/         # Server utilities
+│   ├── image/          # Image optimization
+│   ├── link/           # Smart Link component
+│   ├── cli/            # CLI tool
+│   └── create-reactflow/ # Project scaffolder
+├── apps/
+│   ├── example/        # Example application
+│   └── docs/           # Documentation site
+└── tooling/
+    ├── eslint-config/
+    ├── prettier-config/
+    └── typescript-config/
 ```
 
-### Package Architecture
+---
 
-**Core Package:**
+## 🎯 Learning Outcomes
 
-- Framework runtime
-- Build system
-- Entry points
+By completing this tutorial, you will:
 
-**Feature Packages:**
-
-- Independent features
-- Can be used separately
-- Versioned independently
-
-**Tooling Packages:**
-
-- CLI tools
-- Shared configs
-- Development utilities
+- ✅ Understand monorepo architecture
+- ✅ Master Vite plugin development
+- ✅ Build file-based routing systems
+- ✅ Implement type-safe server functions
+- ✅ Create CLI tools
+- ✅ Deploy full-stack applications
+- ✅ Optimize for production
 
 ---
 
-## 🛠️ Technology Stack
+## 🤝 Contributing
 
-### Build System
+Found an issue or want to improve the tutorial?
 
-- **Turborepo** - Monorepo management
-- **Vinxi** - Build orchestrator
-- **Vite** - Fast bundler
-- **esbuild** - TypeScript compiler
-
-### Server
-
-- **Nitro** - Universal server
-- **H3** - HTTP framework
-- **unjs** - Universal utilities
-
-### React
-
-- **React 19** - UI library
-- **React Router** - Client routing
-- **React Server Components** - Future support
-
-### Optimization
-
-- **sharp** - Image processing
-- **lightningcss** - CSS optimization
-- **@vercel/og** - OG images
+- Open an issue on GitHub
+- Submit a pull request
+- Share your feedback
 
 ---
 
-## 📖 Tutorial Approach
+## 📖 Additional Resources
 
-Each tutorial follows this structure:
+### Official Documentation
 
-### 1. Overview
+- [Vite](https://vitejs.dev/)
+- [Vinxi](https://vinxi.vercel.app/)
+- [Nitro](https://nitro.unjs.io/)
+- [Turborepo](https://turbo.build/repo)
 
-- What we're building
-- Why it's important
-- Expected outcome
+### Inspiration
 
-### 2. Prerequisites
-
-- Required knowledge
-- Dependencies needed
-- Previous steps completed
-
-### 3. Step-by-Step Instructions
-
-- Detailed code examples
-- File structure
-- Configuration
-
-### 4. Testing
-
-- How to test
-- Expected results
-- Troubleshooting
-
-### 5. Next Steps
-
-- What's next
-- Related tutorials
-- Additional resources
+- [Next.js](https://nextjs.org/)
+- [Remix](https://remix.run/)
+- [SolidStart](https://start.solidjs.com/)
+- [TanStack Start](https://tanstack.com/start)
 
 ---
 
-## 🎓 Prerequisites
+## 📝 License
 
-### Required Knowledge
-
-- ✅ JavaScript/TypeScript
-- ✅ React basics
-- ✅ Node.js fundamentals
-- ✅ Command line basics
-
-### Nice to Have
-
-- ⚠️ Monorepo experience
-- ⚠️ Build tools knowledge
-- ⚠️ SSR concepts
-- ⚠️ Framework internals
-
-### Don't Worry!
-
-We'll explain everything as we go. If you can build a React app, you can follow this tutorial.
+MIT
 
 ---
 
-## 🚀 Let's Begin!
+## 🎉 Let's Get Started!
 
-Ready to start? Head to:
+Ready to build your own full-stack React framework?
 
-**[01-Turborepo-Setup.md](./01-Turborepo-Setup.md)** - Initialize your monorepo
-
----
-
-## 📞 Getting Help
-
-### Resources
-
-- [Turborepo Docs](https://turbo.build/repo/docs)
-- [Vinxi Docs](https://vinxi.vercel.app/)
-- [Nitro Docs](https://nitro.unjs.io/)
-- [Vite Docs](https://vitejs.dev/)
-
-### Community
-
-- GitHub Discussions
-- Discord Server
-- Stack Overflow
+**[Start with Chapter 1: Turborepo Setup →](./01-Turborepo-Setup.md)**
 
 ---
 
-## 🎯 Success Checklist
-
-By the end of this tutorial, you'll have:
-
-- [ ] Working monorepo with Turborepo
-- [ ] Core framework package
-- [ ] Image optimization package
-- [ ] Link component package
-- [ ] CLI tool
-- [ ] Example application
-- [ ] Complete documentation
-- [ ] Testing setup
-- [ ] Deployment ready
-
----
-
-**Let's build something amazing! 🚀**
+Happy coding! 🚀
